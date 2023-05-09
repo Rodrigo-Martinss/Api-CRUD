@@ -10,7 +10,7 @@ class Visita extends Model {
       },
       {
         sequelize,
-      },
+      }
     );
   }
 }
