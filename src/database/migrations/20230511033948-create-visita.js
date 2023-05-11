@@ -1,6 +1,6 @@
 module.exports = {
-  up: (queryInterface, Sequelize) =>
-    queryInterface.createTable('vistas_web', {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('visitas', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -27,7 +27,7 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
-    }),
-
-  down: queryInterface => queryInterface.dropTable('vistas_web'),
+    });
+  },
+  down: queryInterface => queryInterface.dropTable('visitas'),
 };

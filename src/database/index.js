@@ -11,9 +11,10 @@ class Database {
   }
 
   init() {
+    // conxão do banco de daados com os models
     this.connection = new Sequelize(databaseConfig);
 
-    models.map((model) => model.init(this.connection));
+    models.map(model => model.init(this.connection));
   }
 }
 

@@ -1,16 +1,9 @@
 import { Router } from 'express';
-import Visita from './app/models/Visita';
+
+import VisitaController from './app/controllers/VisitaController';
 
 const routes = new Router();
 
-routes.get('/teste', async (req, res) => {
-  const visita = await Visita.create({
-    name: 'Joao',
-    cliente: 'teste2',
-    solicitacao: 'testando Data Inicio como times tempo',
-  });
-
-  return res.json(visita);
-});
+routes.post('/visita', VisitaController.store);
 
 export default routes;
